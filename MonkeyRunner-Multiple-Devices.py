@@ -4,14 +4,19 @@ import os
 import sys
 
 def main():
+    # get all device that connected with USB 
     connected_devices = os.popen('adb devices').read().strip().split('\n')[1:]
     devices = []
     for deviceId in connected_devices:
+        # get device name
         deviceName = deviceId.split('\t')[0]
         print('deviceName: ' + deviceName)
+        
+        #get connection of device 
         device = MonkeyRunner.waitForConnection(10.0, deviceName)
         devices.append(device)
 
+    # set start activity
     activityName = 'com.android.settings' + '/' + 'com.android.settings.ManageApplications'     
     for device in devices:
         device.startActivity(component=activityName)
