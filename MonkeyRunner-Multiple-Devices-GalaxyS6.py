@@ -25,18 +25,6 @@ def main():
     print ('startActivity: Settings')
 
     MonkeyRunner.sleep(0.3)
-    # for i in range(0, 15):
-    #     for device in devices:
-    #         device.press('KEYCODE_DPAD_DOWN', MonkeyDevice.DOWN_AND_UP)
-    #     MonkeyRunner.sleep(0.3)
-
-    # for device in devices:
-    #     device.press('KEYCODE_ENTER', MonkeyDevice.DOWN_AND_UP)
-    # MonkeyRunner.sleep(1.2)
-
-    # for device in devices:
-    #     device.press('KEYCODE_ENTER', MonkeyDevice.DOWN_AND_UP)
-    # MonkeyRunner.sleep(1.2)
 
     print ('Applications')
     # Applications
